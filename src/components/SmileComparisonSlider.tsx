@@ -73,6 +73,12 @@ export const SmileComparisonSlider: React.FC<SmileComparisonSliderProps> = ({ is
             alt="Orlando Dental Care transformed smile with handcrafted porcelain veneers"
             className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none"
             referrerPolicy="no-referrer"
+            onError={(e) => {
+              const target = e.currentTarget;
+              if (!target.src.includes('/images/cosmetic_smile_care.jpg')) {
+                target.src = '/images/cosmetic_smile_care.jpg';
+              }
+            }}
           />
 
           {/* BEFORE Layer: Simulated natural dental condition with sepia/subtle desaturation overlay */}
@@ -89,6 +95,12 @@ export const SmileComparisonSlider: React.FC<SmileComparisonSliderProps> = ({ is
                 height: '100%'
               }}
               referrerPolicy="no-referrer"
+              onError={(e) => {
+                const target = e.currentTarget;
+                if (!target.src.includes('/images/cosmetic_smile_care.jpg')) {
+                  target.src = '/images/cosmetic_smile_care.jpg';
+                }
+              }}
             />
             
             {/* Subtle warm tint to emulate natural aged enamel */}

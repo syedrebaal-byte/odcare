@@ -122,6 +122,12 @@ export const ServicesView: React.FC<ServicesViewProps> = ({ onOpenBooking, isSpa
                 alt={activeService.name}
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.src.includes('/images/hero_dental_clinic.jpg')) {
+                    target.src = '/images/hero_dental_clinic.jpg';
+                  }
+                }}
               />
               <div className="absolute top-4 left-4 bg-slate-900/75 backdrop-blur-xs text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
                 {activeService.category}

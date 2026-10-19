@@ -32,6 +32,12 @@ export const DoctorView: React.FC<DoctorViewProps> = ({ onOpenBooking, isSpanish
               alt="Dr. A. Viviana Santos, DDS, Founder and Clinical Director"
               className="w-full h-full object-cover object-top"
               referrerPolicy="no-referrer"
+              onError={(e) => {
+                const target = e.currentTarget;
+                if (!target.src.includes('/images/dentist_dr_santos.jpg')) {
+                  target.src = '/images/dentist_dr_santos.jpg';
+                }
+              }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-transparent to-transparent pointer-events-none" />
             <div className="absolute bottom-6 left-6 right-6 text-white">

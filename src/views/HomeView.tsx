@@ -117,6 +117,12 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   alt="Modern ergonomic treatment suite at Orlando Dental Care with natural light"
                   className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-700"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (!target.src.includes('/images/hero_dental_clinic.jpg')) {
+                      target.src = '/images/hero_dental_clinic.jpg';
+                    }
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent pointer-events-none" />
 
@@ -245,6 +251,12 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 alt="Cosmetic dentistry radiant healthy smile"
                 className="w-full h-full object-cover object-center"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.src.includes('/images/cosmetic_smile_care.jpg')) {
+                    target.src = '/images/cosmetic_smile_care.jpg';
+                  }
+                }}
               />
             </div>
           </div>
@@ -258,6 +270,12 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   alt="Dental implant 3D intraoral scanner model"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (!target.src.includes('/images/dental_implant_tech.jpg')) {
+                      target.src = '/images/dental_implant_tech.jpg';
+                    }
+                  }}
                 />
               </div>
               <span className="text-xs font-medium text-teal-700">02. Restorative Excellence</span>
@@ -291,6 +309,12 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   alt="Invisalign clear aligner tray"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (!target.src.includes('/images/invisalign_aligner.jpg')) {
+                      target.src = '/images/invisalign_aligner.jpg';
+                    }
+                  }}
                 />
               </div>
               <span className="text-xs font-medium text-teal-700">03. Orthodontics</span>
@@ -402,6 +426,12 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   alt="Dr. A. Viviana Santos, DDS, Founder and Dental Director of Orlando Dental Care"
                   className="w-full h-full object-cover object-top"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (!target.src.includes('/images/dentist_dr_santos.jpg')) {
+                      target.src = '/images/dentist_dr_santos.jpg';
+                    }
+                  }}
                 />
                 <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-slate-950/85 via-slate-950/40 to-transparent text-white">
                   <span className="text-xs font-semibold text-teal-300 block">
